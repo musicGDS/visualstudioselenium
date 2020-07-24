@@ -26,14 +26,17 @@ namespace visualstudioselenium
 
             element.SendKeys(Keys.Enter);
 
+            //I think it would be possible to write less lines below this comment
+            //Selecting the list of the results
             
             IWebElement list = driver.FindElement(By.Id("rso"));
 
+            //Finding the 2'nd link with CSS selector
             IWebElement second_link = driver.FindElement(By.CssSelector("#rso:nth-child(2)"));
-
+            //Opening the 2n'd link
             second_link.Click();
 
-            
+            //Wait for user input to terminate the test
             string wait = Console.ReadLine();
             Console.WriteLine(wait);
 
